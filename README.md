@@ -16,4 +16,4 @@
 
   2. cssrem 插件的基准值是  80px 
 
-![项目截图](C:\Users\jxd\Desktop\前端学习资料\前端完整项目总结\e-charts数据可视化项目\项目截图.jpg)
+![Image text](https://github.com/xudji/market-data-visualization-project/blob/main/images/bg.jpg)
