@@ -16,4 +16,4 @@
 
   2. cssrem 插件的基准值是  80px 
 
-![Image text](https://github.com/xudji/market-data-visualization-project/blob/main/images/%E9%A1%B9%E7%9B%AE%E6%88%AA%E5%9B%BE1.jpg width="600px")
+![Image text](https://github.com/xudji/market-data-visualization-project/blob/main/images/%E9%A1%B9%E7%9B%AE%E6%88%AA%E5%9B%BE1.jpg)
