@@ -6,10 +6,6 @@
 li {
   list-style: none;
 }
-@font-face {
-  font-family: electronicFont;
-  src: url(../font/DS-DIGIT.TTF);
-}
 body {
   background-image: url(../images/bg.jpg);
   line-height: 1.15;
@@ -52,7 +48,7 @@ header .showTime {
 .mainBox .panel {
   position: relative;
   height: 3.875rem;
-  padding: 0 0.1875rem 0.5rem;
+  padding: 0 0.3rem 0;
   background-color: plum;
   margin-bottom: 0.1875rem;
   border: 1px solid rgba(25, 186, 139, 0.17);
@@ -111,9 +107,18 @@ header .showTime {
   text-align: center;
   font-size: 0.25rem;
 }
+.mainBox .panel h2 a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.125rem;
+}
 .mainBox .panel .chart {
-  height: 3rem;
-  background-color: #02a6b5;
+  margin-top: 0.2rem;
+  height: 2.8rem;
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
 }
 .no {
   background: rgba(101, 132, 226, 0.1);
@@ -124,24 +129,24 @@ header .showTime {
   border: 1px solid rgba(25, 186, 139, 0.17);
 }
 .no .no-hd::before {
+  content: "";
   position: absolute;
+  width: 30px;
+  height: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
   top: 0;
   left: 0;
-  content: "";
-  width: 30px;
-  height: 10px;
-  border-left: 2px solid #02a6b5;
-  border-top: 2px solid #02a6b5;
 }
 .no .no-hd::after {
-  position: absolute;
-  bottom: 0;
-  right: 0;
   content: "";
+  position: absolute;
   width: 30px;
   height: 10px;
-  border-right: 2px solid #02a6b5;
   border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+  right: 0;
+  bottom: 0;
 }
 .no .no-hd ul {
   display: flex;
@@ -149,31 +154,34 @@ header .showTime {
 .no .no-hd ul li {
   position: relative;
   flex: 1;
+  text-align: center;
+  height: 1rem;
   line-height: 1rem;
   font-size: 0.875rem;
   color: #ffeb7b;
-  text-align: center;
-  font-family: "electronicFont";
+  padding: 0.05rem 0;
+  font-family: electronicFont;
+  font-weight: bold;
 }
-.no .no-hd ul li::after {
-  content: '';
+.no .no-hd ul li:first-child::after {
+  content: "";
   position: absolute;
-  top: 25%;
-  right: 0;
   height: 50%;
   width: 1px;
   background: rgba(255, 255, 255, 0.2);
+  right: 0;
+  top: 25%;
 }
 .no .no-bd ul {
   display: flex;
 }
 .no .no-bd ul li {
   flex: 1;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.225rem;
   height: 0.5rem;
   line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.225rem;
+  color: rgba(255, 255, 255, 0.7);
   padding-top: 0.125rem;
 }
 .map {
@@ -199,7 +207,7 @@ header .showTime {
   height: 6.475rem;
   background: url(../images/map.png) no-repeat;
   background-size: 100% 100%;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 .map .map2 {
   width: 8.0375rem;

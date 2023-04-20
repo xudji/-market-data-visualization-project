@@ -8,11 +8,6 @@ li {
   list-style: none;
 }
 
-// 声明字体
-@font-face {
-  font-family: electronicFont;
-  src: url(../font/DS-DIGIT.TTF);
-}
 
 body {
   background-image: url(../images/bg.jpg);
@@ -49,7 +44,6 @@ header {
   min-width: 1024px;
   max-width: 1920px;
   margin: 0 auto;
-
   padding: .125rem .125rem 0;
 
   .column {
@@ -64,7 +58,7 @@ header {
   .panel {
     position: relative;
     height: 3.875rem;
-    padding: 0 .1875rem .5rem;
+    padding: 0 0.3rem 0;
     background-color: plum;
     margin-bottom: .1875rem;
     border: 1px solid rgba(25, 186, 139, 0.17);
@@ -127,44 +121,56 @@ header {
       line-height: .6rem;
       text-align: center;
       font-size: .25rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 .125rem;
+
+      }
     }
 
     .chart {
-      height: 3rem;
-      background-color: #02a6b5;
+      margin-top: 0.2rem;
+      height: 2.8rem;
+
     }
   }
 }
 
-// no数字模块
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+
 .no {
   background: rgba(101, 132, 226, 0.1);
-  padding: .1875rem;
+  padding: 0.1875rem;
 
   .no-hd {
     position: relative;
     border: 1px solid rgba(25, 186, 139, 0.17);
 
     &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
       content: "";
+      position: absolute;
       width: 30px;
       height: 10px;
-      border-left: 2px solid #02a6b5;
       border-top: 2px solid #02a6b5;
+      border-left: 2px solid #02a6b5;
+      top: 0;
+      left: 0;
     }
 
     &::after {
-      position: absolute;
-      bottom: 0;
-      right: 0;
       content: "";
+      position: absolute;
       width: 30px;
       height: 10px;
-      border-right: 2px solid #02a6b5;
       border-bottom: 2px solid #02a6b5;
+      border-right: 2px solid #02a6b5;
+      right: 0;
+      bottom: 0;
     }
 
     ul {
@@ -173,40 +179,39 @@ header {
       li {
         position: relative;
         flex: 1;
-        line-height: 1rem;
-        font-size: .875rem;
-        color: #ffeb7b;
         text-align: center;
-        font-family: "electronicFont";
+        height: 1rem;
+        line-height: 1rem;
+        font-size: 0.875rem;
+        color: #ffeb7b;
+        padding: 0.05rem 0;
+        font-family: electronicFont;
+        font-weight: bold;
 
-        &::after {
-          content: '';
+        &:first-child::after {
+          content: "";
           position: absolute;
-          top: 25%;
-          right: 0;
           height: 50%;
           width: 1px;
           background: rgba(255, 255, 255, 0.2);
+          right: 0;
+          top: 25%;
         }
       }
     }
-
-
   }
 
-  .no-bd {
-    ul {
-      display: flex;
+  .no-bd ul {
+    display: flex;
 
-      li {
-        flex: 1;
-        text-align: center;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: .225rem;
-        height: .5rem;
-        line-height: .5rem;
-        padding-top: .125rem;
-      }
+    li {
+      flex: 1;
+      height: 0.5rem;
+      line-height: 0.5rem;
+      text-align: center;
+      font-size: 0.225rem;
+      color: rgba(255, 255, 255, 0.7);
+      padding-top: 0.125rem;
     }
   }
 }
@@ -235,7 +240,7 @@ header {
     height: 6.475rem;
     background: url(../images/map.png) no-repeat;
     background-size: 100% 100%;
-    opacity: 0.6;
+    opacity: 0.3;
   }
 
   .map2 {
